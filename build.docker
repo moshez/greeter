@@ -1,7 +1,7 @@
 FROM alpine:3.4
 RUN apk update
 RUN apk add python docker
-ADD setup.py build-runner run.docker /src/
+ADD setup.py run.docker /src/
 ADD greeter /src/greeter/
 RUN python -m ensurepip
 RUN pip install pex wheel
